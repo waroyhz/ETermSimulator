@@ -7,6 +7,10 @@ namespace ETermSimulator
 {
     public class DETRResp:BaseResp
     {
+        public DETRResp(byte[] receiveBuffer) : base(receiveBuffer)
+        {
+        }
+
         public IEnumerator<AirlineTicketData> AirlineTicketDatas { get; set; }
     }
     public class AirlineTicketData

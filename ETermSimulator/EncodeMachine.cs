@@ -166,6 +166,7 @@ namespace ETermSimulator
         public byte[] MiddleToCode(string str) 
         {
             System.Text.RegularExpressions.Regex regex = new System.Text.RegularExpressions.Regex(@"(?<UserName>[\u4E00-\u9FA5]{2,9})");
+            str = str.Replace('|', '\r');
             var matches = regex.Matches(str);
             List<string> strChinese = new List<string>();
             List<int> location = new List<int>();//起始位置
